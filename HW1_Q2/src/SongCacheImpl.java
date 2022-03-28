@@ -2,7 +2,7 @@ import java.util.*;
 
 
 public class SongCacheImpl implements SongCache {
-    private static Map<String, Integer> records = new HashMap<>();
+    private Map<String, Integer> records = new HashMap<>();
     //private static PriorityQueue<String, Integer> recs;
     @Override
     synchronized public void recordSongPlays(String songId, int numPlays) {
