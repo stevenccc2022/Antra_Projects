@@ -14,7 +14,7 @@ public class SongCacheImpl implements SongCache {
     }
 
     @Override
-    public String getPlaysForSong(String songId) {
+    synchronized public String getPlaysForSong(String songId) {
         if (records.containsKey(songId)){
             return ""+records.get(songId);
         }else {
