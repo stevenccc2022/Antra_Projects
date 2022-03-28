@@ -5,7 +5,7 @@ public class SongCacheImpl implements SongCache {
     private static Map<String, Integer> records = new HashMap<>();
     //private static PriorityQueue<String, Integer> recs;
     @Override
-    public void recordSongPlays(String songId, int numPlays) {
+    synchronized public void recordSongPlays(String songId, int numPlays) {
         if (records.containsKey(songId)) {
             records.put(songId, records.get(songId) + numPlays);
         }else{
@@ -23,7 +23,7 @@ public class SongCacheImpl implements SongCache {
     }
 
     @Override
-    public List<String> getTopNSongsPlayed(int n) {
+    synchronized public List<String> getTopNSongsPlayed(int n) {
         List<Map.Entry<String, Integer> > list =
                 new LinkedList<Map.Entry<String, Integer> >(records.entrySet());
 
