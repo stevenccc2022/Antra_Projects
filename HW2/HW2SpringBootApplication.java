@@ -1,4 +1,4 @@
-package hw2;
+package HW2;
 
 
 import org.springframework.boot.SpringApplication;

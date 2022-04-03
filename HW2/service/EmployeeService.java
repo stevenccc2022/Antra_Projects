@@ -1,7 +1,7 @@
-package hw2.service;
+package HW2.service;
 
-import hw2.domain.Employee;
-import hw2.domain.EmployeeDTO;
+import HW2.domain.Employee;
+import HW2.domain.EmployeeDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,7 +11,7 @@ public interface EmployeeService {
 
     EmployeeDTO getEmployeeId(int id);
     List<EmployeeDTO> getAllEmployees();
-//    List<Supervisor_Employee> getSupervisor_EmployeeId(int id);
+//    List<Project_Employee> getProject_EmployeeId(int id);
     EmployeeDTO saveEmployee(Employee employee);
     EmployeeDTO updateEmployee(int id, String name);
 }

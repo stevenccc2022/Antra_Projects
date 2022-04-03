@@ -1,4 +1,4 @@
-package hw2.domain;
+package HW2.domain;
 
 import lombok.Data;
 
@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "supervisor")
+@Table(name = "project")
 @Data
-public class Supervisor {
+public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,24 +19,24 @@ public class Supervisor {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "supervisor", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.LAZY)
-    private List<Manage_Work> manageWorks = new ArrayList<>();
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL, orphanRemoval = false, fetch = FetchType.LAZY)
+    private List<Register> registers = new ArrayList<>();
 
-    private List<Manage_Work> getManageWorks() {
-        return manageWorks;
+    private List<Register> getRegisters() {
+        return registers;
     }
 
-    private void setSupervisor_Employees(List<Manage_Work> manageWorks) {
-        this.manageWorks = manageWorks;
+    private void setProject_Employees(List<Register> registers) {
+        this.registers = registers;
     }
 
-    public void addSupervisor_Employee(Manage_Work se) {
-        this.manageWorks.add(se);
+    public void addProject_Employee(Register se) {
+        this.registers.add(se);
     }
 
     @Override
     public String toString() {
-        return "Supervisor{" +
+        return "Project{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 '}';
@@ -46,7 +46,7 @@ public class Supervisor {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Supervisor that = (Supervisor) o;
+        Project that = (Project) o;
         return id == (that.id) && name.equals(that.name);
     }
 

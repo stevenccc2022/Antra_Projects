@@ -1,4 +1,4 @@
-package hw2.exception;
+package HW2.exception;
 
 
 public class EmployeeNotFoundException extends RuntimeException{

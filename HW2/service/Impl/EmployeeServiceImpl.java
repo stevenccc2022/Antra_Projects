@@ -1,11 +1,11 @@
-package hw2.service.Impl;
+package HW2.service.Impl;
 
 
-import hw2.domain.Employee;
-import hw2.domain.EmployeeDTO;
-import hw2.exception.EmployeeNotFoundException;
-import hw2.repository.EmployeeRepo;
-import hw2.service.EmployeeService;
+import HW2.domain.Employee;
+import HW2.domain.EmployeeDTO;
+import HW2.exception.EmployeeNotFoundException;
+import HW2.repository.EmployeeRepo;
+import HW2.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

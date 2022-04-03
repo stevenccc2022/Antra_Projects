@@ -1,8 +1,8 @@
-package hw2.service.Impl;
+package HW2.service.Impl;
 
-import hw2.domain.RegisterDTO;
-import hw2.repository.RegisterRepo;
-import hw2.service.RegisterService;
+import HW2.domain.RegisterDTO;
+import HW2.repository.RegisterRepo;
+import HW2.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +26,8 @@ public class RegisterImpl implements RegisterService {
     }
 
     @Override
-    public RegisterDTO saveRegister(int s_id, int e_id) {
-        return new RegisterDTO(Register.saveRegister(s_id, e_id));
+    public RegisterDTO saveRegister(int pid, int eid) {
+        return new RegisterDTO(Register.saveRegister(pid, eid));
     }
 
 

@@ -1,7 +1,7 @@
-package hw2.repository;
+package HW2.repository;
 
-import hw2.domain.Employee;
-import hw2.repository.repo_interface.EmployeeRepo_Inter;
+import HW2.domain.Employee;
+import HW2.repository.repo_interface.EmployeeRepo_Inter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

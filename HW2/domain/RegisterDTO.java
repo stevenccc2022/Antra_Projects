@@ -1,17 +1,17 @@
-package hw2.domain;
+package HW2.domain;
 
 import lombok.Data;
 
 @Data
-public class Manage_WorkDTO {
+public class Register {
 
     private int id;
     private String employeeName;
-    private String supervisorName;
+    private String projectName;
 
-    public Manage_WorkDTO(Manage_Work _supervisorEmployee) {
-        this.id = _supervisorEmployee.getId();
-        this.employeeName = _supervisorEmployee.getEmployee().getName();
-        this.supervisorName = _supervisorEmployee.getSupervisor().getName();
+    public Register(Register reg) {
+        this.id = reg.getId();
+        this.employeeName = reg.getEmployee().getName();
+        this.projectName = reg.getProject().getName();
     }
 }

@@ -48,6 +48,6 @@ public class ProjectController {
     @ExceptionHandler(ProjectNotFoundException.class)
     public ResponseEntity<?> customizedExceptionHandler() {
         //get internal error
-        return new ResponseEntity<>("Employee not found. You may get something wrong. ", HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>("Project can not be found", HttpStatus.NOT_FOUND);
     }
 }

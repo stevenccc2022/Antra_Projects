@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface RegisterInter extends JpaRepository<Register, Integer> {
+public interface RegisterRepo_Inter extends JpaRepository<Register, Integer> {
 
     List<Register> findAll();
 

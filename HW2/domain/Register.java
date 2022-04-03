@@ -1,4 +1,4 @@
-package hw2.domain;
+package HW2.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,31 +8,31 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name ="manage_work")
+@Table(name ="register")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Manage_Work {
+public class Register {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "e_id")
+    @JoinColumn(name = "eid")
     private Employee employee;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "s_id")
-    private Supervisor supervisor;
+    @JoinColumn(name = "pid")
+    private Project project;
 
-    public Manage_Work(Employee employee, Supervisor supervisor) {
+    public Register(Employee employee, Project project) {
         this.employee = employee;
-        this.supervisor = supervisor;
+        this.project = project;
     }
 
     @Override
     public String toString() {
-        return "Employee_Supervisor{" +
+        return "Employee_Project{" +
                 "id='" + id + '\'' +
                 '}';
     }
@@ -41,12 +41,12 @@ public class Manage_Work {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Manage_Work that = (Manage_Work) o;
-        return id == (that.id) && employee.equals(that.employee) && supervisor.equals(that.supervisor);
+        Register that = (Register) o;
+        return id == (that.id) && employee.equals(that.employee) && project.equals(that.project);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, employee, supervisor);
+        return Objects.hash(id, employee, project);
     }
 }

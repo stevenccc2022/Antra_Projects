@@ -1,4 +1,4 @@
-package hw2.domain;
+package HW2.domain;
 
 import lombok.Data;
 
