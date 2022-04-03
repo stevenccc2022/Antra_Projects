@@ -12,7 +12,7 @@ public interface ProjectRepo_Inter extends JpaRepository<Project, Integer> {
 
     Project findEmployeeById(int id);
 
-//    List<Employee_Project> findEmployee_ProjectById(int id);
+
 
     Project saveAndFlush(Project employee);
 }

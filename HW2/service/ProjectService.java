@@ -12,7 +12,7 @@ import java.util.List;
 public interface ProjectService {
     ProjectDTO getProjectId(int id);
     List<ProjectDTO> getAllProjects();
-    //    List<Project_Employee> getProject_EmployeeId(int id);
+
     ProjectDTO saveProject(Project project);
     ProjectDTO updateProject(int id, String name);
 }
