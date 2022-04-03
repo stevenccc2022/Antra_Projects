@@ -74,6 +74,7 @@ public class Emp_Proj_Demo {
     /***
      * Remove
      * @param em
+     * Hard coded query from the Demo 
      */
     private static void Remove(EntityManager em) {
         EntityTransaction tx = em.getTransaction();
