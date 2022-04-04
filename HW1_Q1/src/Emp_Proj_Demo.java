@@ -10,47 +10,47 @@ import java.util.List;
 import java.util.Properties;
 public class Emp_Proj_Demo {
 
-//    private DataSource getDataSource() {
-//        final PGSimpleDataSource dataSource = new PGSimpleDataSource();
-////        dataSource.setDatabaseName("OrmDemo");
-//        dataSource.setUser("postgres");
-//        dataSource.setPassword("password");
-//        dataSource.setUrl("jdbc:postgresql://localhost:5432/university");
-//        return dataSource;
-//    }
+    private DataSource getDataSource() {
+        final PGSimpleDataSource dataSource = new PGSimpleDataSource();
+//        dataSource.setDatabaseName("OrmDemo");
+        dataSource.setUser("postgres");
+        dataSource.setPassword("password");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/hw2_demoDB");
+        return dataSource;
+    }
 
-//    private Properties getProperties() {
-//        final Properties properties = new Properties();
-//        properties.put( "hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect" );
-//        properties.put( "hibernate.connection.driver_class", "org.postgresql.Driver" );
-////        properties.put("hibernate.show_sql", "true");
-//        return properties;
-//    }
+    private Properties getProperties() {
+        final Properties properties = new Properties();
+        properties.put( "hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect" );
+        properties.put( "hibernate.connection.driver_class", "org.postgresql.Driver" );
+//        properties.put("hibernate.show_sql", "true");
+        return properties;
+    }
 
-//    private EntityManagerFactory entityManagerFactory(DataSource dataSource, Properties hibernateProperties ){
-//        final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-//        em.setDataSource(dataSource);
-//        em.setPackagesToScan( "com/example/java20il2021/week4/day15/demo3");
-//        em.setJpaVendorAdapter( new HibernateJpaVendorAdapter() );
-//        em.setJpaProperties( hibernateProperties );
-//        em.setPersistenceUnitName( "demo-unit" );
-//        em.setPersistenceProviderClass(HibernatePersistenceProvider.class);
-//        em.afterPropertiesSet();
-//        return em.getObject();
-//    }
+    private EntityManagerFactory entityManagerFactory(DataSource dataSource, Properties hibernateProperties ){
+        final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
+        em.setDataSource(dataSource);
+        em.setPackagesToScan( "HW1_Q1/src/");
+        em.setJpaVendorAdapter( new HibernateJpaVendorAdapter() );
+        em.setJpaProperties( hibernateProperties );
+        em.setPersistenceUnitName( "demo-unit" );
+        em.setPersistenceProviderClass(HibernatePersistenceProvider.class);
+        em.afterPropertiesSet();
+        return em.getObject();
+    }
 
 
     //
     public static void main(String[] args) {
-       // Emp_Proj_Demo jpaDemo = new Emp_Proj_Demo();
-       // DataSource dataSource = jpaDemo.getDataSource();
-       // Properties properties = jpaDemo.getProperties();
-       // EntityManagerFactory entityManagerFactory = jpaDemo.entityManagerFactory(dataSource, properties);
-       // EntityManager em = entityManagerFactory.createEntityManager();
-       // PersistenceUnitUtil unitUtil = entityManagerFactory.getPersistenceUnitUtil();
+        Emp_Proj_Demo jpaDemo = new Emp_Proj_Demo();
+        DataSource dataSource = jpaDemo.getDataSource();
+        Properties properties = jpaDemo.getProperties();
+        EntityManagerFactory entityManagerFactory = jpaDemo.entityManagerFactory(dataSource, properties);
+        EntityManager em = entityManagerFactory.createEntityManager();
+        PersistenceUnitUtil unitUtil = entityManagerFactory.getPersistenceUnitUtil();
 
-        //Insert(em);
-        //Remove(em);
+        Insert(em);
+        Remove(em);
 
     }
 

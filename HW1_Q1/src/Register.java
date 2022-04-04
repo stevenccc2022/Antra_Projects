@@ -29,7 +29,7 @@ public class Register {
     private String id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "e_id")
+    @JoinColumn(name = "eid")
     private Employee emp;
 
     @ManyToOne(fetch = FetchType.LAZY)
