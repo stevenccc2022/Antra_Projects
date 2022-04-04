@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public interface EmployeeService {
 
-    EmployeeDTO getEmployeeId(int id);
+    EmployeeaDTO getEmployeeId(int id);
     List<EmployeeDTO> getAllEmployees();
 
     EmployeeDTO saveEmployee(Employee employee);
