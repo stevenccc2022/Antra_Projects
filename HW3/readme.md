@@ -14,4 +14,4 @@ http://dummy.restapiexample.com/api/v1/employees
   
   The homework uses one entity: Employee, which was inherited from HW2.
   <p>I created restTemplate in EmployeeController, created two functions implementation for retrieving eployee data in domain/Employee.java using Stream.<br>
-  I added dependency in pom.xml for restTemplate, pojo, and retry. I read through articles about POJO which implements serilizable. And I am not quite sure the implementation for swagger and retry.<br></p>
+  I added dependency in pom.xml for restTemplate, pojo, and retry. I read through articles about POJO which implements serilizable and I am not quite sure the implementation for swagger and retry.<br></p>
