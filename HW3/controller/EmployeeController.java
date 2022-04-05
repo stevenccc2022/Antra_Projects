@@ -28,7 +28,7 @@ public class EmployeeController {
      */
     RestTemplate restTemplate = new RestTemplate();
     String fooResourceUrl = "http://dummy.restapiexample.com/api/v1/employees";
-    ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
+    ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "/age", String.class);
     Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
     /**
      * Check Http Status code and response
